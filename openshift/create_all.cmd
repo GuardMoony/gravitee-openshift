@@ -36,16 +36,13 @@ oc new-build ../ --name=management-ui --context-dir=images/management-ui/ --stra
 oc start-build management-ui --build-arg=GRAVITEEIO_VERSION=%GRAVITEEIO_VERSION% --wait=true
 oc tag management-ui:latest management-ui:%GRAVITEEIO_VERSION%
 
-oc create -f persistentvolumes/elasticdata.yaml
-oc create -f persistentvolumes/mongodata.yaml
-
 # import OpenShift Template
 oc process -f .\template-graviteeapim.yaml -p GRAVITEE_VERSION=%GRAVITEEIO_VERSION%  | oc create -f -
 
 set GRAVITEEAM_VERSION=1.6.2
 
 # am-gateway
-oc new-build ../ --name=am-gateway --context-dir=images/am-gateway/ --strategy=docker --build-arg=GRAVITEEAM_VERSION=%GRAVITEEIO_VERSION%
+oc new-build ../ --name=am-gateway --context-dir=images/am-gateway/ --strategy=docker --build-arg=GRAVITEEAM_VERSION=%GRAVITEEAM_VERSION%
 oc start-build am-gateway --build-arg=GRAVITEEAM_VERSION=%GRAVITEEAM_VERSION% --wait=true
 oc tag am-gateway:latest am-gateway:%GRAVITEEAM_VERSION%
 

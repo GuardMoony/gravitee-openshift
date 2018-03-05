@@ -25,6 +25,12 @@ oc delete route gateway -n gravitee
 oc delete imagestream gateway -n gravitee
 oc delete bc gateway -n gravitee
 
-oc delete persistentvolumeclaim elasticdata -n gravitee
-oc delete persistentvolumeclaim mongodata -n gravitee
+oc delete dc am-gateway -n gravitee
+oc delete services am-gateway -n gravitee
+oc delete route am-gateway -n gravitee
+oc delete imagestream am-gateway -n gravitee
+oc delete bc am-gateway -n gravitee
+
+#oc delete persistentvolumeclaim elasticdata -n gravitee
+#oc delete persistentvolumeclaim mongodata -n gravitee
 
