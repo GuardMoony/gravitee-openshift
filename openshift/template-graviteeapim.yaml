@@ -446,7 +446,7 @@ objects:
     resources:
       requests:
         storage: 100Mi
-    volumeName: pv0001
+#    volumeName: pv0001
   status: {}
 - apiVersion: v1
   kind: PersistentVolumeClaim
@@ -462,7 +462,7 @@ objects:
     resources:
       requests:
         storage: 100Mi
-    volumeName: pv0002
+#    volumeName: pv0002
   status: {}
 parameters:
   - name: NAMESPACE 
@@ -471,7 +471,7 @@ parameters:
     required: true 
   - name: GRAVITEE_VERSION 
     description: Verion of gravitee to deploy
-    value: 1.10.4
+    value: 1.13.2
     required: true 
   - name: OPENSHIFT_SUFFIXE
     description: Base of web access for openshift 
