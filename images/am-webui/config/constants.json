@@ -1,0 +1,13 @@
+{
+    "portalTitle": "Gravitee.io Access Management",
+    "baseURL": "http://${GRAVITEEIO-AM-GATEWAY-HOST}/management",
+    "authentication": {
+      "oauth2": {
+        "authorize": "http://${GRAVITEEIO-AM-GATEWAY-HOST}/admin/oauth/authorize",
+        "userInfo": "http://${GRAVITEEIO-AM-GATEWAY-HOST}/admin/userinfo",
+        "clientId": "admin",
+        "redirectUri": "http://${GRAVITEEIO-AM-UI-HOST}/oauth/callback",
+        "logoutUri": "http://${GRAVITEEIO-AM-GATEWAY-HOST}/admin/logout?target_url=http://${GRAVITEEIO-AM-UI-HOST}/logout/callback"
+      }
+    }
+  }
