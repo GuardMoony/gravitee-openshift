@@ -36,6 +36,6 @@ RUN wget https://download.gravitee.io/graviteeio-am/components/gravitee-am-webui
 
 EXPOSE 80
 
-ENV GRAVITEEIO-AM-GATEWAY-HOST accessmanagement-gravitee.minishift.local
+ENV GRAVITEEIO-AM-GATEWAY-HOST am-gateway-gravitee.minishift.local
 
 CMD ["nginx", "-g", "daemon off;"]
