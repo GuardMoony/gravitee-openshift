@@ -38,6 +38,6 @@ COPY config/constants.json ${WWW_TARGET}
 
 EXPOSE 80
 
-ENV GRAVITEEIO-AM-GATEWAY-HOST am-gateway-gravitee.minishift.local
+ENV GRAVITEEIO_AM_GATEWAY_HOST am-gateway-gravitee.minishift.local
 
 CMD ["nginx", "-g", "daemon off;"]
