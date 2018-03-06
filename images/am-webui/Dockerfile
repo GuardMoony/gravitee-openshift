@@ -34,7 +34,7 @@ RUN wget https://download.gravitee.io/graviteeio-am/components/gravitee-am-webui
     && mv /tmp/gravitee-am-webui-${GRAVITEEAM_VERSION}/* ${WWW_TARGET} \
     && rm -rf /tmp/*
 
-COPY config/constants.json ${WWW_TARGET}
+COPY config/constants.json /var/www/html/constants.json
 
 EXPOSE 80
 
