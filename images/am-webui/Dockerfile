@@ -34,6 +34,8 @@ RUN wget https://download.gravitee.io/graviteeio-am/components/gravitee-am-webui
     && mv /tmp/gravitee-am-webui-${GRAVITEEAM_VERSION}/* ${WWW_TARGET} \
     && rm -rf /tmp/*
 
+COPY constants.json ${WWW_TARGET}
+
 EXPOSE 80
 
 ENV GRAVITEEIO-AM-GATEWAY-HOST am-gateway-gravitee.minishift.local
